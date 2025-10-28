@@ -176,3 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
+  Rb: {fileID: 5076126}
+  Force: {x: 0, y: 0}

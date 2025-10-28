@@ -195,6 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663c4015f2205d1498e5f18eb8c9b377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Bullet>k__BackingField: {fileID: 115806, guid: 40466c5ac40024bbca1e4b144cdf43c2, type: 3}
+  <ShootPoint>k__BackingField: {fileID: 432471647}
   atkRange: 0
   Player: {fileID: 0}
 --- !u!1001 &49013220
@@ -415,7 +417,7 @@ GameObject:
   m_Layer: 8
   m_Name: ShootPoint(Player)
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -799,7 +801,7 @@ GameObject:
   m_Layer: 0
   m_Name: ShootPoint(Croc)
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

@@ -2,13 +2,25 @@ using UnityEngine;
 
 public class Rock : Weapons
 {
+    public Rigidbody2D Rb;
+    public Vector2 Force;
     public override void Move()
     {
-        throw new System.NotImplementedException();
+        Rb.AddForce(Force);
     }
-
     public override void OnHitWith(Character target)
     {
-        throw new System.NotImplementedException();
+        if (target is Player)
+            target.TakeDamage(this.Damage);
     }
+
+    void Start()
+    {
+        Damage = 20;
+        Force = new Vector2(GetShootDirection() * 90, 350);
+        Move();
+    }
+
+ 
+
 }
