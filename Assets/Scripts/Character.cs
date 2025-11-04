@@ -2,6 +2,16 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
+    public HealthBarUi HealthBar;
+
+
+    private int maxHealth;
+
+    public int MaxHealth
+    {
+        get { return maxHealth; }
+        set { maxHealth = (value > 200 ? 200: value); }
+    }
 
     private int health;
     public int Health 
@@ -16,10 +26,11 @@ public abstract class Character : MonoBehaviour
 
 
 
-    public void Initialized(int defaultHp)
+    public void Initialized(int maxHp)
     {
-        Health = defaultHp;
-        Debug.Log($"Hp initialized.... in {this.name} || HP : {defaultHp} ||");
+        MaxHealth = maxHp;
+        Health = maxHp;
+        Debug.Log($"Hp initialized.... in {this.name} || HP : {Health} ||");
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -28,7 +39,7 @@ public abstract class Character : MonoBehaviour
     {
         Health -= damage;
         Debug.Log($"{this.name} taken {damage} amounts of damage || Current Health is {Health}");
-
+        HealthBar.SetHealth(Health);
         IsDead();
     }
 
@@ -46,7 +57,7 @@ public abstract class Character : MonoBehaviour
     }
     void Start()
     {
-        
+        HealthBar.SetMaxHealt(MaxHealth);
     }
 
     // Update is called once per frame

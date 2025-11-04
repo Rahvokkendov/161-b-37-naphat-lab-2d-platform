@@ -3,24 +3,16 @@ using UnityEngine.UI;
 
 public class HealthBarUi : MonoBehaviour
 {
-    public Slider Slider;
-    public Color Low;
-    public Color High;
-    public Vector3 Offset;
+    public Slider slider;
 
-    public void SetHealth(float health, float maxHealth)
+    public void SetMaxHealt(int maxHealth)
     {
-        Slider.gameObject.SetActive(health < maxHealth);
-        Slider.value = health;
-        Slider.maxValue = maxHealth;
-
-        Slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low,High,Slider.normalizedValue) ;
+        slider.maxValue = maxHealth;
+        slider.value = maxHealth;
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void SetHealth(int health)
     {
-        Slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + Offset);
+        slider.value = health;
     }
 }

@@ -7,6 +7,7 @@ public class Player : Character, IShootable
     public float ReloadTime { get ; set ; }
     public float WaiTime { get ; set ; }
 
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,7 +15,7 @@ public class Player : Character, IShootable
         base.Initialized(50);
         ReloadTime = 1.0f;
         WaiTime = 0.0f;
-    }
+    }   
 
     private void FixedUpdate()
     {
@@ -55,4 +56,6 @@ public class Player : Character, IShootable
             WaiTime = 0.0f;
         }
     }
+
+  
 }
