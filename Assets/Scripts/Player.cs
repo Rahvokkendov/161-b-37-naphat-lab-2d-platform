@@ -51,7 +51,8 @@ public class Player : Character, IShootable
             Banana banana = bullet.GetComponent<Banana>();
             if (banana != null)
             {
-                banana.InitWeapon(20, this);
+                banana.InitWeapon(10, this);
+
             }
             WaiTime = 0.0f;
         }

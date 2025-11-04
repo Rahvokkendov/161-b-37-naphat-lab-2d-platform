@@ -20,7 +20,6 @@ public class Banana : Weapons
     void Start()
     {
         speed = 4.0f * GetShootDirection();
-        Damage = 30;
     }
 
     private void FixedUpdate()

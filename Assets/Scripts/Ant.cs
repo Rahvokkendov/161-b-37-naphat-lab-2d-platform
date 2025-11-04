@@ -8,12 +8,13 @@ public class Ant : Enemy
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        base.Initialized(10);
+        base.Initialized(30);
         DamageHit = 5;
 
         //(x, y)
         velocity = new Vector2 (-1.0f, 0.0f);
     }
+
 
     public override void Behavior()
     {

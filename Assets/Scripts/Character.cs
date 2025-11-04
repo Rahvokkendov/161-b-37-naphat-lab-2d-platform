@@ -33,6 +33,7 @@ public abstract class Character : MonoBehaviour
         Debug.Log($"Hp initialized.... in {this.name} || HP : {Health} ||");
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        HealthBar.SetMaxHealt(MaxHealth);
     }
 
     public void TakeDamage(int damage)
@@ -57,7 +58,6 @@ public abstract class Character : MonoBehaviour
     }
     void Start()
     {
-        HealthBar.SetMaxHealt(MaxHealth);
     }
 
     // Update is called once per frame
